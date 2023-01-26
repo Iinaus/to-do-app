@@ -1,38 +1,92 @@
-.App {
+* {
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*VARIABLES*/
+:root {
+  /*COLOR SCHEME*/
+  --MAINCOLOR: #284B63;
+  --EFFECTCOLOR: #438691;
+  --FONTCOLOR-DARK:#000;
+  --FONTCOLOR-LIGHT: #fff;
+  --BGCOLOR-DARK: #284B63;
+  --BGCOLOR-EFFECT: #438691;
+  --BGCOLOR-LIGHT:#e9eaee;
+  --BGCOLOR-NEUTRAL:#fff;
+
+  /*GENERAL*/
+  --PADDING: 1rem ;
+  --PADDING-SMALL: 0.5rem;
+  --PADDING-XS: 0.2rem;
+  --PADDING-NONE: 0rem;
+  --MARGIN: 1rem;
+  --MARGIN-SMALL: 0.5rem;
+  --MARGIN-XS: 0.2rem;
+  --MARGIN-NONE: 0rem;
+}
+  
+table {
+  margin: auto;
+  padding: var(--PADDING);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+thead {
+  margin: var(--MARGIN);
+  padding: var(--PADDING-XS);
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+thead td {
+  width: 150px;
+  border-bottom: 1px dashed gray;
+}
+
+td {
+  margin: var(--MARGIN);
+  padding: var(--PADDING-SMALL);
+}
+
+header {
+  margin: var(--MARGIN-NONE);
+  padding: var(--PADDING);
+  color: var(--FONTCOLOR-LIGHT);
+  background-color: var(--BGCOLOR-DARK);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+header a {
+  margin: var(--MARGIN-SMALL);
+  padding: var(--PADDING-SMALL);
+  color: var(--FONTCOLOR-LIGHT);
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header a:hover {
+  color: var(--FONTCOLOR-DARK);
+}
+
+nav {
+  margin: var(--MARGIN-NONE);
+  padding: var(--PADDING);
+  text-align: right;
+}
+
+main {
+  margin: var(--MARGIN);
+  padding: var(--PADDING);
+  background-color: var(--BGCOLOR-NEUTRAL);
+  border-radius: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: var(--MARGIN-SMALL);
+  padding: var(--PADDING-SMALL);
+}
+
+ul {
+  list-style-position: inside;
 }
